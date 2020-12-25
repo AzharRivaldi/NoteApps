@@ -210,12 +210,12 @@ class CreateNoteActivity : AppCompatActivity() {
         dialog.tvHapusCatatan.setOnClickListener {
 
             class HapusNoteAsyncTask : AsyncTask<Void?, Void?, Void?>() {
-                override fun doInBackground(vararg p0: Void?): Void? {
+                private fun doInBackground(var p0: Void?): Void? {
                     NoteDatabase.getInstance(applicationContext)?.noteDao()?.delete(modelNoteExtra)
                     return null
                 }
 
-                override fun onPostExecute(aVoid: Void?) {
+                private fun onPostExecute(aVoid: Void?) {
                     super.onPostExecute(aVoid)
                     val intent = Intent()
                     intent.putExtra("NoteDelete", true)
