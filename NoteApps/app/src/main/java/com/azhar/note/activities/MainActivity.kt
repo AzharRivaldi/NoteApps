@@ -57,11 +57,11 @@ class MainActivity : AppCompatActivity(), onClickItemListener {
 
         @Suppress("UNCHECKED_CAST")
         class GetNoteAsyncTask : AsyncTask<Void?, Void?, List<ModelNote>>() {
-            override fun doInBackground(vararg p0: Void?): List<ModelNote>? {
-                return NoteDatabase.getInstance(this@MainActivity)?.noteDao()?.allNote as List<ModelNote>?
+            private fun doInBackground(var p0: Void?): List<ModelNote>? {
+                return NoteDatabase.getInstance(this@MainActivity).noteDao().allNote as List<ModelNote>?
             }
 
-            override fun onPostExecute(notes: List<ModelNote>) {
+            private fun onPostExecute(notes: List<ModelNote>) {
                 super.onPostExecute(notes)
                 if (requestCode == REQUEST_SHOW) {
                     modelNoteList.addAll(notes)
