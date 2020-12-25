@@ -1,7 +1,7 @@
 # NoteApps
 Source Code Aplikasi Catatan Android
 
-# Tutorial Build with Android Studio
+# Tutorial Build with Android Studio (Jika ada error, silahkan tonton video ini)
 https://youtu.be/-qb2DaFmozw
 
 # Tutorial Build with Step by Step
